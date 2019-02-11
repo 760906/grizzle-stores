@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grizzly Store | Dashboard</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/main.js"></script>
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+</head>
+<body>
+        <!--Navigation Bar STARTS-->
+        <nav class="navbar navbar-expand-md bg-color">
+                <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <img src="images/logo2.PNG"></img>        
+                <div class="container navbar-collapse collapse w-100 order-3 dual-collapse2">
+
+                    <ul class="navbar-nav ml-auto">
+                        <li>
+                            <a href="#"><img src="images/notify-icon.PNG" style="padding-top:10px; padding-right:30px;"></img></a>
+                        </li>
+                        <li>
+                            <a class="nav-link exitcolor" href="#" style=" padding-right: 80px;">Welcome, Admin &lt;Name&gt;...</a>
+                        </li>
+                    </ul>
+                <button type="submit" name="login-btn" class="btn btn-sm input-button exitcolor"  onClick="location.href='index.html'">Logout</button> 
+                </div>
+            </nav>
+        <!--Navigation Bar ENDS-->
+
+        <!--SIDE PROFILE BLOCK-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-3">
+                            <div id="side-profile">
+                                    <div class="container-fluid" style=" padding-top: 10px;">
+                                        <div id="profile-head">
+                                            <p>PROFILE</p>
+                                        </div>
+                                    </div>
+                                    <div class="image-box"></div>
+                                    <div style="padding-top:20px;">
+                                        <h6>Helen Cho</h6>
+                                    </div>
+                                    <div>
+                                        <div style="padding-top:10px; font-size: 90%;">ID</div>
+                                        <div style="color:gray; font-size: 90%;">GRZLY17234</div>
+                                    </div>
+                                    <div>
+                                        <div style="padding-top:10px; font-size: 90%;">Designation</div>
+                                        <div style="color:gray; font-size: 90%;">Sr. Admin</div>
+                                    </div>
+                                    <div>
+                                        <div style="padding-top:10px; font-size: 90%;">Office</div>
+                                        <div style="color:gray; font-size: 90%;">NYC, NY, USA</div>
+                                    </div>
+                            </div> 
+                    </div>
+                
+                <!--NAVIGATION BUTTON-->
+                <div class="col-sm-9">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <button type="button" class="nav-btn" onClick="displayFunc('product-display')">PRODUCTS</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="button" class="nav-btn" onClick="displayFunc('vendor-display')">VENDORS</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="button" class="nav-btn" style="margin-left: -25%">CATEGORY</button>
+                            </div>
+                        </div>
+                        
+                        <!--ALL DISPLAYS-->
+                        <div id="all-display">
+                            
+                            <!--PRODUCT DISPLAY-->
+                            <div id="product-display">
+                                <!---Searchbar and filter buttons-->
+                                <div class="row" style="margin-top:3%;">
+                                    <div class="col-sm-4">
+                                        <input type="text" name="searchbar" placeholder="Search by Product Name/ID" class="search-input">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="button" name="filter" class="filter-input" value="Filter by Category">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="button" name="sortby" class="sort-input" value="Sort by">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="button" name="addprod" class="add-product" value="Add Product"  data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                                    </div>
+                                </div>
+
+                                <!--Product Table-->
+                                <div class="row" style="margin-top: 4%">
+                                    <table id="protab">
+                                        <tr>
+                                        <td>Products List</td>
+                                        <td>Brand</td>
+                                        <td>Category</td>
+                                        <td>Rating</td>
+                                        <td></td>
+                                        </tr>
+                                        <tr>
+                                        <td>Trimmer</td>
+                                        <td>Philips</td>
+                                        <td>Personal Care</td>
+                                        <td>4.7</td>
+                                        <td>
+                                                <div class="row">
+                                                        <button type="button" name="view" class="table-btn">View</button>
+                                                        <button type="button" name="block" class="table-btn">Block</button>
+                                                        <button type="button" name="remove" class="table-btn">Remove</button> 
+                                                </div>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>Shaver</td>
+                                        <td>Braun</td>
+                                        <td>Personal Care</td>
+                                        <td>4.8</td>
+                                        <td>
+                                                <div class="row">
+                                                        <button type="button" name="view" class="table-btn">View</button>
+                                                        <button type="button" name="block" class="table-btn">Block</button>
+                                                        <button type="button" name="remove" class="table-btn">Remove</button> 
+                                                </div>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>Macbook Pro</td>
+                                        <td>Apple</td>
+                                        <td>Laptops</td>
+                                        <td>4.9</td>
+                                        <td>
+                                                <div class="row">
+                                                        <button type="button" name="view" class="table-btn">View</button>
+                                                        <button type="button" name="block" class="table-btn">Block</button>
+                                                        <button type="button" name="remove" class="table-btn">Remove</button> 
+                                                </div>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>iMac 27"</td>
+                                        <td>Apple</td>
+                                        <td>Laptops</td>
+                                        <td>4.6</td>
+                                        <td>
+                                                <div class="row">
+                                                        <button type="button" name="view" class="table-btn">View</button>
+                                                        <button type="button" name="block" class="table-btn">Block</button>
+                                                        <button type="button" name="remove" class="table-btn">Remove</button> 
+                                                </div>
+                                        </td>
+                                       </tr>
+                                        <tr>
+                                        <td>Micron Pens</td>
+                                        <td>Sakura Pigma</td>
+                                        <td>Art Supplies</td>
+                                        <td>4.1</td>
+                                        <td>
+                                                <div class="row">
+                                                        <button type="button" name="view" class="table-btn">View</button>
+                                                        <button type="button" name="block" class="table-btn">Block</button>
+                                                        <button type="button" name="remove" class="table-btn">Remove</button> 
+                                                </div>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>Paint Markers</td>
+                                        <td>Copic</td>
+                                        <td>Art Supplies</td>
+                                        <td>4.2</td>
+                                        <td>
+                                                <div class="row">
+                                                        <button type="button" name="view" class="table-btn">View</button>
+                                                        <button type="button" name="block" class="table-btn">Block</button>
+                                                        <button type="button" name="remove" class="table-btn">Remove</button> 
+                                                </div>
+                                        </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                          
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+
+
